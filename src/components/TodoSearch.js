@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
 
-class TodoSearch extends Component {
+export default class  TodoSearch extends Component {
 	render() {
 		return (
 			<div>
-<input type="search" placeholder="Search"/>
-
+				<input type="text" placeholder="Search"
+					   aria-label="Search"/>
 			</div>
-
-
-					);
-					}
-					}
-
-					export default TodoSearch;
+		);
+	}
+}

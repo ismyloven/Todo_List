@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import Todoinput from "./components/Todoinput";
 import TodoList from "./components/TodoList";
 
+import TodoSearch from "./components/TodoSearch";
+import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import uuid from "react-uuid";
 
 
@@ -73,7 +74,7 @@ render() {
         <div className="row">
             <div className="col-10 mx-auto col-md-8 mt-4">
                 <div className="">
-                <h2 className="text-capitalize text-center">To Do List </h2>
+                    <div className="text-capitalize text-center todoSearch"><span className="todolist">To Do List</span>  < TodoSearch/></div>
 
                 </div>
                 <Todoinput item={this.state.item}
@@ -81,12 +82,14 @@ render() {
                            handleSubmit={this.handleSubmit}
                            editItem={this.state.editItem}
                 />
+
                 <TodoList
                     items={this.state.items}
                     clearList={this.clearList}
                     handleDelete={this.handleDelete}
                     handleEdit={this.handleEdit}
                 />
+
             </div>
         </div>
     </div>
