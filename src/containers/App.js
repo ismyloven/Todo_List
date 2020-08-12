@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
-import Todoinput from "./components/Todoinput";
-import TodoList from "./components/TodoList";
+import Todoinput from "../components/Todoinput/Todoinput";
+import TodoList from "../components/TodoList/TodoList";
+import TodoSearch from "../components/TodoSearch/TodoSearch";
 
-import TodoSearch from "./components/TodoSearch";
+//Style
+
 import "./App.css";
+
+
+//Library
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import uuid from "react-uuid";
@@ -120,7 +125,7 @@ class App extends Component {
 					<div className="col-10 mx-auto col-md-8 mt-4">
 						<div className="">
 							<div className="text-capitalize text-center todoSearch"><span className="todolist">To Do List</span>
-								< TodoSearch/></div>
+								<TodoSearch/></div>
 
 						</div>
 						<Todoinput item={this.state.item}
